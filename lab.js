@@ -119,11 +119,7 @@ function greeting( obj ) {
 var stateNums = {'utah' : 5, 'california' : 6, 'texas' : 0, 'arizona' : 1}
 function totalPopulation(obj){
   let {utah, california, texas, arizona} = obj
-  let ut = utah;
-  let ca = california;
-  let tx = texas;
-  let az = arizona;
-  let sum = ut + ca + tx + az;
+  let sum = utah + california + texas + arizona;
   return sum; 
 }
 
@@ -142,11 +138,8 @@ console.log(totalPopulation(stateNums));
 var food = {'carb' : 'bread', 'fat': 'ice cream', 'protein' :'steak'}
 function ingredients(obj){
   let {carb, fat, protein} = obj
-  let c = carb;
-  let f = fat;
-  let p = protein;
   let arr = [];
-  arr.push(c, f, p);
+  arr.push(carb, fat, protein);
   return arr
 }
 
@@ -227,14 +220,14 @@ class Wizard {
     this.age = age;
     this.favoriteSpell = favoriteSpell;
   }
-  catSpell(){
+  castSpell(){
     console.log(`${this.name} has cast ${this.favoriteSpell}`)
   }
 }
 
 let witch = new Wizard('wicked', 100, 'abracadabra');
 
-witch.catSpell();
+witch.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
